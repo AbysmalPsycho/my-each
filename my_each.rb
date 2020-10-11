@@ -1,3 +1,12 @@
-def my_each # put argument(s) here
-  # code here
-end
+collection = [1, 2, 3, 4]
+
+def my_each(array)
+  if block_given? 
+    x = 0
+    while x < array.length
+      yield(array[x])
+        x = x +1
+    end
+    array
+  end
+ end
